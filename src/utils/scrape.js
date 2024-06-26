@@ -11,6 +11,7 @@ const scrapeTopScores = async () => {
     const scores = [];
     $('table tr').each((index, element) => {
       if (index === 0) return;
+      if (index > 10) return false;
 
       const cells = $(element).find('td');
       const score = {
@@ -24,8 +25,8 @@ const scrapeTopScores = async () => {
         teleBonus: $(cells[7]).text(),
         dronePts: $(cells[8]).text(),
         hang: $(cells[9]).text(),
-        teams: $(cells[10]).text(), // This only grabs the first team
-        event: $(cells[11]).text(), // This grabs the second team?
+        teams: [$(cells[10]).text().split(" ")[0], $(cells[11]).text().split(" ")[0], $(cells[12]).text().split(" ")[0]], // This only grabs the first team
+        event: $(cells[13]).text(), // This grabs the second team?
       };
 
       scores.push(score);
