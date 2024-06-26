@@ -2,7 +2,7 @@ import axios from 'axios';
 import 'dotenv/config';
 
 const API_BASE_URL = 'https://theorangealliance.org/api';
-const API_KEY = 'MV0CsKI7QaW6XKGkkqQVjpQFH01Zmc6GKBsxu7kZac0='; // RoP
+const API_KEY = process.env.TOA_API_KEY;
 
 const api = axios.create({
     baseURL: API_BASE_URL,
