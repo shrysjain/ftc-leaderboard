@@ -19,31 +19,55 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <div className={styles.leaderboard}>
-      <h1>Top 10 Scores</h1>
-      {scores.length > 0 ? (
-        <ul>
-          {scores.map((score, index) => (
-            <li key={index}>
-              <p>Rank: {index + 1}</p>
-              <p>Score: {score.score}</p>
-              <p>Auto: {score.auto}</p>
-              <p>TeleOp: {score.teleOp}</p>
-              <p>End: {score.end}</p>
-              <p>Auto Task Pts: {score.autoTaskPts}</p>
-              <p>Auto Pixels: {score.autoPixels}</p>
-              <p>Tele Pixels: {score.telePixels}</p>
-              <p>Tele Bonus: {score.teleBonus}</p>
-              <p>Drone Pts: {score.dronePts}</p>
-              <p>Hang: {score.hang}</p>
-              <p>Teams: {score.teams}</p>
-              <p>Event: {score.event}</p>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading scores...</p>
-      )}
+    <div className={styles['dark-mode-wrapper']}>
+      <div className={styles.leaderboard}>
+        <h1>FIRST Tech Challenge Chesapeake Region Leaderboard</h1>
+        <h2>An automatically-updating scoresheet of the current top 10 games amongst all FTC teams and events in the Chesapeake region.</h2>
+        {scores.length > 0 ? (
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Auto</th>
+                <th>TeleOp</th>
+                <th>End</th>
+                <th>Auto Task Pts</th>
+                <th>Auto Pixels</th>
+                <th>Tele Pixels</th>
+                <th>Tele Bonus</th>
+                <th>Drone Pts</th>
+                <th>Hang</th>
+                <th>Teams</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scores.map((score, index) => (
+                <tr key={index} className={index < 3 ? styles['top-team'] : ''}>
+                  <td>{index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : index + 1}</td>
+                  <td>{score.score}</td>
+                  <td>{score.auto}</td>
+                  <td>{score.teleOp}</td>
+                  <td>{score.end}</td>
+                  <td>{score.autoTaskPts}</td>
+                  <td>{score.autoPixels}</td>
+                  <td>{score.telePixels}</td>
+                  <td>{score.teleBonus}</td>
+                  <td>{score.dronePts}</td>
+                  <td>{score.hang}</td>
+                  <td>{score.teams[0]}</td>
+                  <td>{score.teams[1]}</td>
+                  <td>{score.teams[2]}</td>
+                  <td>{score.event}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p>Loading scores...</p>
+        )}
+      </div>
     </div>
   );
 };

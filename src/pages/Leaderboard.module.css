@@ -1,26 +1,69 @@
+/* Leaderboard.module.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+.dark-mode-wrapper {
+  background-color: #0c0a09;
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  padding-top: 40px;
+}
+
 .leaderboard {
-  padding: 20px;
-  background-color: #f9f9f9;
   border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 40px;
 }
 
 .leaderboard h1 {
-  text-align: center;
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-.leaderboard ul {
-  list-style: none;
-  padding: 0;
+.leaderboard h2 {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 1em;
+  color: #8c8c8c;
+  text-decoration: none;
+  font-weight: 100;
 }
 
-.leaderboard li {
-  margin: 10px 0;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  color: #f2f2f2;
+}
+
+.table th,
+.table td {
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  text-align: left;
+  border-bottom: 1px solid #555;
 }
 
-.leaderboard p {
-  margin: 5px 0;
+.table tbody tr:hover {
+  background-color: #2b2b2b;
+}
+
+/* Stack team cells vertically */
+.table td:nth-child(12),
+.table td:nth-child(13),
+.table td:nth-child(14) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.table td:nth-child(12) p,
+.table td:nth-child(13) p,
+.table td:nth-child(14) p {
+  margin: 0;
 }
