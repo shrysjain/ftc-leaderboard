@@ -7,7 +7,7 @@ const REGION_URLS = {
   ar: 'http://www.ftcstats.org/2024/arkansas.html',
   az: 'http://www.ftcstats.org/2024/arizona.html',
   ca: 'http://www.ftcstats.org/2024/california.html',
-  cano: 'http://www.ftcstats.org/2024/california_northern.html',
+  calno: 'http://www.ftcstats.org/2024/california_northern.html',
   cals: 'http://www.ftcstats.org/2024/california_southern.html',
   casd: 'http://www.ftcstats.org/2024/california_san_diego.html',
   chs: 'http://www.ftcstats.org/2024/chesapeake.html',
