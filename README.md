@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FTC Leaderboard 🤖🏅
+
+FTC Leaderboard is a live, auto-magically updating web application that displays leaderboard scores for the top FIRST Tech Challenge (FTC) matches and teams across all FIRST regions in the United States. It allows users to view scores from different regions, access detailed team information, and provides a user-friendly interface for navigating through the data.
+
+## Key Features
+
+- **Region Selection**: Choose from a list of FTC regions to view leaderboard scores.
+- **Score Details**: Click on team names to view detailed information including city, state, country, and other relevant details.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Interactive UI**: Buttons for each region allow easy navigation and exploration of different leaderboards.
+
+## Built With
+
+- **Next.js**: React framework for building server-rendered applications
+- **React**: JavaScript library for building user interfaces
+- **Axios**: Promise-based HTTP client for making API requests
+- **Cheerio**: Implementation of core jQuery designed specifically for the server
+- **TailwindCSS**: Scoped CSS for styling components
 
 ## Getting Started
 
-First, run the development server:
+The production deployment of FTC Leadeboard is available [here](http://ftc-leaderboard.vercel.app)
+
+To run your own instance of FTC Leaderboard, follow these steps:
+
+1. **Clone the Repository**:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/shrysjain/ftc-leaderboard.git
+cd ftc-leaderboard
+```
+*Alternatively, clone via SSH, the GitHub CLI, or GitHub desktop*
+
+2. **Install Dependencies**:
+```bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Set Up Environment Variables:**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Create an `.env.local` file in the root directory
+- Add an environmental variable with your *The Orange Alliance API Key*
+```env
+NEXT_PUBLIC_API_KEY=<your_key_here>
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Launch the Development Sever**:
+```bash
+npm run dev
+```
 
-## Learn More
+5. **Open in Your Browser**:
 
-To learn more about Next.js, take a look at the following resources:
+Open your web browser and navigate to http://localhost:3000 to see the application running locally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data Sources
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **[FIRST Inspires](https://www.firstinspires.org/team-event-search)**: Provides information about competitions and teams
+- **[FTC Stats](http://ftcstats.org)**: Offers score breakdowns for FTC matches and event information
+- **[The Orange Alliance API](https://theorangealliance.org/apidocs)**: Used for retrieving specific team details
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licensing
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
