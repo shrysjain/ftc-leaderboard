@@ -1,0 +1,75 @@
+/* Homepage.module.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+.main {
+  font-family: "Poppins", sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main h1 {
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+  margin-top: 30px;
+}
+
+.main h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #a2a2a2;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.regionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.regionButton {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #5f5f5f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.regionButton:hover {
+  background-color: #1f1f1f;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #d7d7d7;
+}
+
+.footer a {
+  color: #d7d7d7;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
