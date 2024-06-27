@@ -19,7 +19,7 @@ FTC Leaderboard is a live, auto-magically updating web application that displays
 
 ## Getting Started
 
-The production deployment of FTC Leadeboard is available [here](http://ftc-leaderboard.vercel.app)
+The production deployment of FTC Leaderboard is available [here](http://ftc-leaderboard.vercel.app)
 
 To run your own instance of FTC Leaderboard, follow these steps:
 
