@@ -50,6 +50,12 @@
   transition: background-color 0.3s ease;
 }
 
+.intlRegionTitle {
+  color: #f2f2f2;
+  font-size: 1.4em;
+  text-align: center;
+}
+
 .regionButton:hover {
   background-color: #1f1f1f;
 }
@@ -57,6 +63,7 @@
 .footer {
   margin-top: 40px;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .footer p {

@@ -49,6 +49,40 @@ const REGION_URLS = {
   wa: 'http://www.ftcstats.org/2024/washington.html',
   wi: 'http://www.ftcstats.org/2024/wisconsin.html',
   wy: 'http://www.ftcstats.org/2024/wyoming.html',
+
+  ab: 'http://www.ftcstats.org/2024/alberta.html',
+  aus: 'http://www.ftcstats.org/2024/australia.html',
+  bc: 'http://www.ftcstats.org/2024/british_columbia.html',
+  bel: 'http://www.ftcstats.org/2024/belgium.html',
+  bra: 'http://www.ftcstats.org/2024/brazil.html',
+  chn: 'http://www.ftcstats.org/2024/china.html',
+  cyp: 'http://www.ftcstats.org/2024/cyprus.html',
+  gbr: 'http://www.ftcstats.org/2024/united_kingdom.html',
+  grc: 'http://www.ftcstats.org/2024/greece.html',
+  idn: 'http://www.ftcstats.org/2024/indonesia.html',
+  ind: 'http://www.ftcstats.org/2024/india.html',
+  isr: 'http://www.ftcstats.org/2024/israel.html',
+  ita: 'http://www.ftcstats.org/2024/italy.html',
+  jam: 'http://www.ftcstats.org/2024/jamaica.html',
+  kaz: 'http://www.ftcstats.org/2024/kazakhstan.html',
+  ly: 'http://www.ftcstats.org/2024/libya.html',
+  mad: 'http://www.ftcstats.org/2024/military_and_diplomatic.html',
+  mar: 'http://www.ftcstats.org/2024/morocco.html',
+  mex: 'http://www.ftcstats.org/2024/mexico.html',
+  mys: 'http://www.ftcstats.org/2024/malaysia.html',
+  nga: 'http://www.ftcstats.org/2024/nigeria.html',
+  nld: 'http://www.ftcstats.org/2024/netherlands.html',
+  nzl: 'http://www.ftcstats.org/2024/new_zealand.html',
+  on: 'http://www.ftcstats.org/2024/ontario.html',
+  pr: 'http://www.ftcstats.org/2024/puerto_rico.html',
+  qat: 'http://www.ftcstats.org/2024/qatar.html',
+  qc: 'http://www.ftcstats.org/2024/quebec.html',
+  rou: 'http://www.ftcstats.org/2024/romania.html',
+  skr: 'http://www.ftcstats.org/2024/south_korea.html',
+  tha: 'http://www.ftcstats.org/2024/thailand.html',
+  twn: 'http://www.ftcstats.org/2024/taiwan.html',
+  vnm: 'http://www.ftcstats.org/2024/vietnam.html',
+  zaf: 'http://www.ftcstats.org/2024/south_africa.html',
 };
 
 const scrapeTopScores = async (region) => {
@@ -88,7 +122,7 @@ const scrapeTopScores = async (region) => {
 
     return scores;
   } catch (error) {
-    console.error('Error scraping data:', error);
+    console.error(`Error creating leaderboard. Try again in a bit, and if this is still not working, open an issue on the GitHub repository @ github.com/shrysjain/ftc-leaderboard/issues/new - rntas${i+1}`);
     return [];
   }
 };
