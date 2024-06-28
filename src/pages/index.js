@@ -94,7 +94,7 @@ const HomePage = () => {
     <div className="home">
     <div className={styles.main}>
       <h1 className={styles.title}>FIRST Tech Challenge Leaderboard</h1>
-      <h2 className={styles.description}>A live automagically updating leaderboard for FTC matches and teams across all FIRST regions and events in the United States.</h2>
+      <h2 className={styles.description}>A live automagically updating leaderboard for FTC matches and teams across all FIRST regions and events in the world.</h2>
     </div>
       <div className={styles.container}>
         <div className={styles.regionButtons}>
