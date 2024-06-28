@@ -54,6 +54,40 @@ const regions = [
   { code: 'wa', name: 'Washington' },
   { code: 'wi', name: 'Wisconsin' },
   { code: 'wy', name: 'Wyoming' },
+
+  { code: 'ab', name: 'Alberta' },
+  { code: 'aus', name: 'Australia' },
+  { code: 'bc', name: 'British Columbia' },
+  { code: 'bel', name: 'Belgium' },
+  { code: 'bra', name: 'Brazil' },
+  { code: 'chn', name: 'China' },
+  { code: 'cyp', name: 'Cyprus' },
+  { code: 'gbr', name: 'United Kingdom' },
+  { code: 'grc', name: 'Greece' },
+  { code: 'idn', name: 'Indonesia' },
+  { code: 'ind', name: 'India' },
+  { code: 'isr', name: 'Israel' },
+  { code: 'ita', name: 'Italy' },
+  { code: 'jam', name: 'Jamaica' },
+  { code: 'kaz', name: 'Kazakhstan' },
+  { code: 'ly', name: 'Libya' },
+  { code: 'mad', name: 'Military and Diplomatic' },
+  { code: 'mar', name: 'Morocco' },
+  { code: 'mex', name: 'Mexico' },
+  { code: 'mys', name: 'Malaysia' },
+  { code: 'nga', name: 'Nigeria' },
+  { code: 'nld', name: 'Netherlands' },
+  { code: 'nzl', name: 'New Zealand' },
+  { code: 'on', name: 'Ontario' },
+  { code: 'pr', name: 'Puerto Rico' },
+  { code: 'qat', name: 'Qatar' },
+  { code: 'qc', name: 'Quebec' },
+  { code: 'rou', name: 'Romania' },
+  { code: 'skr', name: 'South Korea' },
+  { code: 'tha', name: 'Thailand' },
+  { code: 'twn', name: 'Taiwan' },
+  { code: 'vnm', name: 'Vietnam' },
+  { code: 'zaf', name: 'South Africa' },
 ];
 
 const RegionPage = () => {
@@ -70,7 +104,9 @@ const RegionPage = () => {
           const response = await axios.get(`/api/scores/${region}`);
           setScores(response.data);
         } catch (error) {
-          console.error('Error fetching scores:', error);
+          for (let i = 0; i < 10; i++) {
+            console.error(`Error creating leaderboard. Try again in a bit, and if this is still not working, open an issue on the GitHub repository @ github.com/shrysjain/ftc-leaderboard/issues/new - rntas${i+1}`);
+          }
         }
       };
 
@@ -82,9 +118,10 @@ const RegionPage = () => {
     try {
       const response = await getTeamInfo(teamNumber);
       setSelectedTeam(response[0]);
-      console.log(response[0])
     } catch (error) {
-      console.error(`Error fetching team ${teamNumber} information:`, error);
+      for (let i = 0; i < 10; i++) {
+        console.error(`Error fetching information for team ${teamNumber}. If you're seeing this, The Orange Alliance API is probably down. Try again in a bit, and if it is still not working, open an issue on the GitHub repository @ github.com/shrysjain/ftc-leaderboard/issues/new - rntas${i+1}`);
+      }
       setSelectedTeam(null);
     }
   };
@@ -99,7 +136,7 @@ const RegionPage = () => {
   return (
     <><div className={styles['dark-mode-wrapper']}>
       <div className={styles.leaderboard}>
-        <h1>FIRST Tech Challenge {regionCode} Region Leaderboard</h1>
+        <h1>FIRST Tech Challenge {regionName} Region Leaderboard</h1>
         <h2>An automatically-updating scoresheet of the current top 10 games amongst all FTC teams and events in the {regionName} region.</h2>
         {scores.length > 0 ? (
           <table className={styles.table}>
@@ -151,7 +188,7 @@ const RegionPage = () => {
             </tbody>
           </table>
         ) : (
-          <><p>Hang on, we're crunching the latest numbers just for you :)</p><p>Loading scores....</p></>
+          <><p>Hang on, we're crunching the latest numbers just for you :)</p><p>Loading scores....</p><p>If this is taking too long, check the JavaScript console.</p></>
         )}
         {selectedTeam && (
           <div className={styles.popup}>

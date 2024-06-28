@@ -53,6 +53,42 @@ const regions = [
   { code: 'wy', name: 'Wyoming' },
 ];
 
+const internationalRegions = [
+  { code: 'ab', name: 'Alberta' },
+  { code: 'aus', name: 'Australia' },
+  { code: 'bc', name: 'British Columbia' },
+  { code: 'bel', name: 'Belgium' },
+  { code: 'bra', name: 'Brazil' },
+  { code: 'chn', name: 'China' },
+  { code: 'cyp', name: 'Cyprus' },
+  { code: 'gbr', name: 'United Kingdom' },
+  { code: 'grc', name: 'Greece' },
+  { code: 'idn', name: 'Indonesia' },
+  { code: 'ind', name: 'India' },
+  { code: 'isr', name: 'Israel' },
+  { code: 'ita', name: 'Italy' },
+  { code: 'jam', name: 'Jamaica' },
+  { code: 'kaz', name: 'Kazakhstan' },
+  { code: 'ly', name: 'Libya' },
+  { code: 'mad', name: 'Military and Diplomatic' },
+  { code: 'mar', name: 'Morocco' },
+  { code: 'mex', name: 'Mexico' },
+  { code: 'mys', name: 'Malaysia' },
+  { code: 'nga', name: 'Nigeria' },
+  { code: 'nld', name: 'Netherlands' },
+  { code: 'nzl', name: 'New Zealand' },
+  { code: 'on', name: 'Ontario' },
+  { code: 'pr', name: 'Puerto Rico' },
+  { code: 'qat', name: 'Qatar' },
+  { code: 'qc', name: 'Quebec' },
+  { code: 'rou', name: 'Romania' },
+  { code: 'skr', name: 'South Korea' },
+  { code: 'tha', name: 'Thailand' },
+  { code: 'twn', name: 'Taiwan' },
+  { code: 'vnm', name: 'Vietnam' },
+  { code: 'zaf', name: 'South Africa' },
+];
+
 const HomePage = () => {
   return (
     <div className="home">
@@ -68,6 +104,14 @@ const HomePage = () => {
             </Link>
           ))}
         </div>
+        <h3 className={styles.intlRegionTitle}>International Regions</h3>
+          <div className={styles.regionButtons}>
+            {internationalRegions.map((region) => (
+              <Link key={region.code} href={`${region.code}`} className={styles.regionButton}>
+                {region.name}
+              </Link>
+            ))}
+          </div>
         <footer className={styles.footer}>
           <p>developed with <span role="img" aria-label="heart">❤️</span> by <a href="https://shrysjain.github.io" target="_blank" rel="noopener noreferrer">shreyas jain</a></p>
           <p><i>© 2024 shreyas jain • all rights reserved</i></p>
