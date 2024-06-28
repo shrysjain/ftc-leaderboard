@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import styles from './Homepage.module.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const regions = [
   { code: 'ak', name: 'Alaska' },
@@ -117,6 +118,7 @@ const HomePage = () => {
           <p><i>© 2024 shreyas jain • all rights reserved</i></p>
         </footer>
       </div>
+      <Analytics />
       </div>
   );
 };
