@@ -4,3 +4,9 @@ body {
   padding: 0;
   background-color: #0c0a09;
 }
+
+.copyleft {
+  display: inline-block;
+  transform: rotate(180deg);
+  font-size: 110%;
+}

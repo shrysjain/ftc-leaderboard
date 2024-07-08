@@ -115,7 +115,7 @@ const HomePage = () => {
           </div>
         <footer className={styles.footer}>
           <p>developed with <span role="img" aria-label="heart">❤️</span> by <a href="https://shrysjain.github.io" target="_blank" rel="noopener noreferrer">shreyas jain</a></p>
-          <p><i>© 2024 shreyas jain • all rights reserved</i></p>
+          <p><i><span class="copyleft">&copy;</span>2024 shreyas jain • all rights reserved</i></p>
         </footer>
       </div>
       <Analytics />
