@@ -8,6 +8,7 @@ FTC Leaderboard is a live, auto-magically updating web application that displays
 - **Score Details**: Click on team names to view detailed information including city, state, country, and other relevant details.
 - **Responsive Design**: Optimized for desktop and mobile devices.
 - **Interactive UI**: Buttons for each region allow easy navigation and exploration of different leaderboards.
+- **Public API**: Provides a REST API for developers to fetch regional match information.
 
 ## Built With
 
@@ -52,6 +53,76 @@ npm run dev
 5. **Open in Your Browser**:
 
 Open your web browser and navigate to http://localhost:3000 to see the application running locally.
+
+## Accessing Data via REST API
+
+This project provides a publicly available REST API endpoint to access the top 10 match scores for any region. You can use this API to fetch raw JSON data for your own projects.
+
+### API Endpoints
+
+To get the top 10 match scores for a specific region, use the following URL pattern:
+
+```sh
+/api/scores/{region_code}
+```
+
+Replace `{region_code}` with the appropriate code for the region you are interested in. Here are a few examples:
+
+For the Chesapeake region:
+
+```sh
+/api/scores/chs
+```
+
+For the Alberta region:
+
+```sh
+/api/scores/ab
+```
+
+For the Australia region:
+
+```sh
+/api/scores/aus
+```
+
+You can find region codes in the URL of any specific region's page on FTC Leaderboard as the string of characters following the forward slash.
+
+### Sample Request
+
+To fetch data for the Chesapeake region, you can make an HTTP GET request to:
+
+```sh
+https://ftc-leaderboard.vercel.app/api/scores/chs
+```
+
+### Sample Response
+
+The API will return a JSON response with the top 10 match scores for the specified region. A sample response might look like this:
+
+```json
+[
+  {
+    "score": "301",
+    "auto": "115",
+    "teleOp": "96",
+    "end": "90",
+    "autoTaskPts": "80",
+    "autoPixels": "5",
+    "telePixels": "22",
+    "teleBonus": "30",
+    "dronePts": "50",
+    "hang": "2",
+    "teams": [
+      "17774",
+      "6417",
+      "11534"
+    ],
+    "event": "Chesapeake Chesapeake Championship 02/03/24 F1"
+  },
+  ...
+]
+```
 
 ## Data Sources
 
