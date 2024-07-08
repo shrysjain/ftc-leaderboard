@@ -60,4 +60,4 @@ Open your web browser and navigate to http://localhost:3000 to see the applicati
 - **[The Orange Alliance API](https://theorangealliance.org/apidocs)**: Used for retrieving specific team details
 
 ## Licensing
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the GNU General Public License. See the [LICENSE](./LICENSE) file for details.
