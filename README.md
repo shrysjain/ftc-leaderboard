@@ -1,6 +1,6 @@
 # FTC Leaderboard 🤖🏅 
 
-FTC Leaderboard is a live, auto-magically updating web application that displays leaderboard scores for the top FIRST Tech Challenge (FTC) matches and teams across all FIRST regions in the United States. It allows users to view scores from different regions, access detailed team information, and provides a user-friendly interface for navigating through the data.
+FTC Leaderboard is a live, auto-magically updating web application that displays leaderboard scores for the top FIRST Tech Challenge (FTC) matches and teams across all FIRST regions in the world. It allows users to view scores from different regions, access detailed team information, and provides a user-friendly interface for navigating through the data.
 
 ## Key Features
 
